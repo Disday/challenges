@@ -1,3 +1,5 @@
+import { expect, test } from '@jest/globals';
+
 import simple from '../challenges/pascalTriangle/pascalTriangle.js';
 import optimized from '../challenges/pascalTriangle/pascalTriangleOptimized.js';
 import advanced from '../challenges/pascalTriangle/pascalTriangleAdvanced.js';
