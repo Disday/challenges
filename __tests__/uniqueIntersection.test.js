@@ -1,10 +1,8 @@
 import assert from 'node:assert';
 import { log, time, timeEnd } from 'node:console';
 import { intersection1, intersection2 } from '../dist/uniqueIntersection/solution.js';
+import { repeat } from '../lib/lib.js';
 
-const repeat = (func, count) => {
-  [...Array(count).keys()].forEach(func);
-};
 const getRandom = () => Math.round(Math.random() * 1000);
 
 const arr1 = Array(1000).fill().map(getRandom);

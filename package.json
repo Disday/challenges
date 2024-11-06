@@ -10,7 +10,7 @@
   "name": "challanges",
   "version": "1.0.0",
   "scripts": {
-    "test": "node --experimental-vm-modules node_modules/jest/bin/jest --config ./jest.config.js"
+    "test": "pnpm tsc -b && pnpm node"
   },
   "author": "",
   "license": "ISC",
