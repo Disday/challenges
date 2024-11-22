@@ -1,17 +1,21 @@
-import { expect, test } from '@jest/globals';
-import fib from '../fibMemoized.js';
+// import { expect, test } from '@jest/globals';
+import assert from 'assert';
+import { fibonacci, fibonacciLoop } from '../challenges/fibMemoized.js';
 
-test('Small Numbers', () => {
-  expect(fib(0)).toEqual(0);
-  expect(fib(1)).toEqual(1);
-  expect(fib(5)).toEqual(5);
-  expect(fib(10)).toEqual(55);
-  expect(fib(15)).toEqual(610);
-  expect(fib(20)).toEqual(6765);
-});
+// assert.equal(fibonacci(0), 0);
+// assert.equal(fibonacci(5), 5);
+// assert.equal(fibonacci(10), 55);
+// assert.equal(fibonacci(15), 610);
+// assert.equal(fibonacci(20), 6765);
+// assert.equal(fibonacci(50), 12586269025);
+// assert.equal(fibonacci(60), 1548008755920);
+// assert.equal(fibonacci(70), 190392490709135);
 
-test('Large Numbers', () => {
-  expect(fib(50)).toEqual(12586269025);
-  expect(fib(60)).toEqual(1548008755920);
-  expect(fib(70)).toEqual(190392490709135);
-});
+assert.equal(fibonacciLoop(0), 0);
+assert.equal(fibonacciLoop(5), 5);
+assert.equal(fibonacciLoop(10), 55);
+assert.equal(fibonacciLoop(15), 610);
+assert.equal(fibonacciLoop(20), 6765);
+assert.equal(fibonacciLoop(50), 12586269025);
+assert.equal(fibonacciLoop(60), 1548008755920);
+assert.equal(fibonacciLoop(70), 190392490709135);

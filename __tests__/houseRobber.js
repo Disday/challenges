@@ -1,6 +1,6 @@
 import assert from 'node:assert';
 import { time, timeEnd } from 'node:console';
-import { rob, robRecursive } from '../dist/houseRobber/solution.js';
+import { rob } from '../dist/houseRobber/solution.js';
 import { repeat } from '../lib/lib.js';
 
 // eslint-disable-next-line
@@ -15,14 +15,14 @@ const bigInput = [226, 174, 214, 16, 218, 48, 153, 131, 128, 17, 157, 142, 88, 4
 // repeat(() => robRecursive(bigInput), 10000);
 // timeEnd('recursion');
 
-assert.equal(robRecursive(bigInput), 7102);
+// assert.equal(robRecursive(bigInput), 7102);
 
-// assert.equal(rob([0]), 0);
-// assert.equal(rob([1, 2]), 2);
-// assert.equal(rob([1, 2, 3, 1]), 4);
+assert.equal(rob([0]), 0);
+assert.equal(rob([1, 2]), 2);
+assert.equal(rob([1, 2, 3, 1]), 4);
 assert.equal(rob([2, 7, 9, 3, 1, 5]), 16);
-// assert.equal(rob(bigInput), 7102);
+assert.equal(rob(bigInput), 7102);
 
-// time('loop');
-// repeat(() => rob(bigInput), 10000);
-// timeEnd('loop');
+time('loop');
+repeat(() => rob(bigInput), 10000);
+timeEnd('loop');
