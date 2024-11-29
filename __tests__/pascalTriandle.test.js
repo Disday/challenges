@@ -1,4 +1,4 @@
-import { expect, test } from '@jest/globals';
+import test from 'jest';
 
 import simple from '../challenges/pascalTriangle/pascalTriangle.js';
 import optimized from '../challenges/pascalTriangle/pascalTriangleOptimized.js';

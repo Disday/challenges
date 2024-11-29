@@ -37,15 +37,15 @@ export function fibonacci(arg) {
   return iter(arg);
 }
 
-// console.time('1');
-// console.log(fibonacci(50));
-// console.timeEnd('1');
+console.time('1');
+console.log(fibonacci(50));
+console.timeEnd('1');
 
-// function fibonacci2(n) {
-//   if (n < 2) return n;
-//   return fibonacci2(n - 1) + fibonacci2(n - 2);
-// }
+function fibonacci2(n) {
+  if (n < 2) return n;
+  return fibonacci2(n - 1) + fibonacci2(n - 2);
+}
 
-// console.time('2');
-// console.log(fibonacci2(45));
-// console.timeEnd('2');
+console.time('2');
+console.log(fibonacci2(45));
+console.timeEnd('2');

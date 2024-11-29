@@ -68,39 +68,39 @@ export function rob(arr: number[]): number {
 //   return Math.max(map.get(0), map.get(1))
 // }
 
-// export function robRecursive(nums: number[]): number {
-//   if (nums.length === 1) {
-//     return nums[0]
-//   }
+export function robRecursive(nums: number[]): number {
+  if (nums.length === 1) {
+    return nums[0]
+  }
 
-//   const map = new Map<number, number>()
+  const map = new Map<number, number>()
 
-//   const iter = (i: number, route: number[] = []) => {
-//     const currentRoute = [...route, i]
+  const iter = (i: number, route: number[] = []) => {
+    const currentRoute = [...route, i]
 
-//     if (i + 2 > nums.length - 1 || map.has(i)) {
-//       while (currentRoute.length > 0) {
-//         const currentIndex = currentRoute.pop()
-//         const parentIndex = currentRoute[currentRoute.length - 1]
+    if (i + 2 > nums.length - 1 || map.has(i)) {
+      while (currentRoute.length > 0) {
+        const currentIndex = currentRoute.pop()
+        const parentIndex = currentRoute[currentRoute.length - 1]
 
-//         const parentSum = map.get(parentIndex) ?? 0
-//         const currentSum = map.get(currentIndex) ?? nums[currentIndex]
-//         map.set(currentIndex, currentSum)
+        const parentSum = map.get(parentIndex) ?? 0
+        const currentSum = map.get(currentIndex) ?? nums[currentIndex]
+        map.set(currentIndex, currentSum)
 
-//         const newParentSum = nums[parentIndex] + currentSum
-//         if (newParentSum > parentSum) {
-//           map.set(parentIndex, newParentSum)
-//         }
-//       }
+        const newParentSum = nums[parentIndex] + currentSum
+        if (newParentSum > parentSum) {
+          map.set(parentIndex, newParentSum)
+        }
+      }
 
-//       return
-//     }
+      return
+    }
 
-//     iter(i + 2, currentRoute)
-//     iter(i + 3, currentRoute)
-//   }
+    iter(i + 2, currentRoute)
+    iter(i + 3, currentRoute)
+  }
 
-//   iter(0)
-//   iter(1)
-//   return Math.max(map.get(0), map.get(1))
-// }
+  iter(0)
+  iter(1)
+  return Math.max(map.get(0), map.get(1))
+}
