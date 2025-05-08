@@ -14,40 +14,37 @@
 */
 function sostavChisla(massivChisel, chislo) {
   // код писать только внутри данной функции
-  massivChisel.sort((a, b) => b - a)
+  massivChisel.sort((a, b) => b - a);
   // console.log(mas);
 
-  let result = []
-  let i = 0
-  let goal = chislo
-  let combo = []
+  const result = [];
+  let i = 0;
+  let goal = chislo;
+  let combo = [];
 
   while (i < massivChisel.length) {
-    const max = massivChisel[i]
-    const d = goal - max
+    const max = massivChisel[i];
+    const d = goal - max;
     // console.log({ d, max });
 
     if (d !== 0) {
-      combo.push(max)
-      i++
-      goal = d
+      combo.push(max);
+      i++;
+      goal = d;
       console.log(combo);
-      continue
+      continue;
     }
 
-    i = 0
-    goal = chislo
-    result.push(combo)
-    combo = []
+    i = 0;
+    goal = chislo;
+    result.push(combo);
+    combo = [];
   }
 
-  return result
+  return result;
 }
 
 console.log(sostavChisla([7, 8, 3, 4, 5, 6, 1, 2], 15));
-
-
-
 
 // function compareNumericArrays(arr1, arr2) {
 //   if (arr1.length !== arr2.length) {
